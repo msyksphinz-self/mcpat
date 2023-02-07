@@ -658,7 +658,7 @@ void Core::set_core_param() {
   coredynp.num_fp_pipelines = XML->sys.core[ithCore].pipelines_per_core[1];
   coredynp.fp_pipeline_stages = XML->sys.core[ithCore].pipeline_depth[1];
   coredynp.int_data_width = int(ceil(XML->sys.machine_bits / 32.0)) * 32;
-  coredynp.fp_data_width = coredynp.int_data_width;
+  coredynp.fp_data_width = int(ceil(XML->sys.fp_reg_width / 32.0)) * 32;
   coredynp.v_address_width = XML->sys.virtual_address_width;
   coredynp.p_address_width = XML->sys.physical_address_width;
 

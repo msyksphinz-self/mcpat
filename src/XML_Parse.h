@@ -584,6 +584,7 @@ typedef struct {
   bool opt_area;
   int interconnect_projection_type;
   int machine_bits;
+  int fp_reg_width;
   int virtual_address_width;
   int physical_address_width;
   int virtual_memory_page_size;

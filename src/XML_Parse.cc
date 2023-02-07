@@ -281,6 +281,12 @@ void ParseXML::parse(std::string filepath) {
       continue;
     }
     if (strcmp(xNode2.getChildNode("param", i).getAttribute("name"),
+               "fp_reg_width") == 0) {
+      sys.fp_reg_width =
+          atoi(xNode2.getChildNode("param", i).getAttribute("value"));
+      continue;
+    }
+    if (strcmp(xNode2.getChildNode("param", i).getAttribute("name"),
                "virtual_address_width") == 0) {
       sys.virtual_address_width =
           atoi(xNode2.getChildNode("param", i).getAttribute("value"));
